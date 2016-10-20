@@ -1,0 +1,14 @@
+
+<div class='row'>
+  <% @restaurants.each do |restaurant| %>
+    <%= erb :'partials/_restaurant_index', layout: false, locals: {restaurant: restaurant} %>
+  <% end %>
+</div>
+
+<% if logged_in? %>
+  <div id="restaurant-form-row" class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+      <a id='get-restaurant-form' class='btn btn-lg btn-block btn-default' href='/restaurants/new'>Add a Restaurant</a>
+    </div>
+  </div>
+<% end %>

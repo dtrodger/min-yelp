@@ -1,0 +1,17 @@
+<form action="/restaurants/<%= restaurant_id %>/comments" method='post'>
+  <label for='rating'>Rating</label>
+  <select name='review[value]'>
+    <option>5</option>
+    <option>4</option>
+    <option>3</option>
+    <option>2</option>
+    <option>1</option>
+    <option>0</option>
+  </select>
+  <br />
+
+  <label for='content'>Review</label>
+  <textarea name='review[content]' rows='8' cols='34'></textarea>
+  <br />
+  <input class='btn btn-lg btn-primary btn-block' type='submit' value='Save Review'>
+</form>

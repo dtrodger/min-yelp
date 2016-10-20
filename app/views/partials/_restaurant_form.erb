@@ -1,0 +1,36 @@
+<div class='row'>
+  <div class='col-md-6 col-md-offset-3 text-center'>
+    <form action=<% if @edit %>'/restaurants/<%= edit['id'] %>'<% else %>'/restaurants'<% end %> method='post'>
+      <% if @edit %>
+      <input type="hidden" name="_method" value="put" />
+      <% end %>
+      <label for='name'>Name</label>
+      <input type='text' name='restaurant[name]' <% if @edit %>value='<%= edit['name'] %>'<% end %>>
+      <br />
+
+      <label for='cuisine'>Cuisine</label>
+      <input type='text' name='restaurant[cuisine]' <% if @edit %>value='<%= edit['cuisine'] %>'<% end %>>
+      <br />
+
+      <label for='address'>Address</label>
+      <input type='text' name='restaurant[address]' <% if @edit %>value='<%= edit['address'] %>'<% end %>>
+      <br />
+
+      <label for='city'>City</label>
+      <input type='text' name='restaurant[city]' <% if @edit %>value='<%= edit['city'] %>'<% end %>>
+      <br />
+
+      <label for='state'>State</label>
+      <input type='text' name='restaurant[state]' <% if @edit %>value='<%= edit['state'] %>'<% end %>>
+      <br />
+
+      <label for='zip'>Zip</label>
+      <input type='text' name='restaurant[zip]' <% if @edit %>value='<%= edit['zip'] %>'<% end %>>
+      <br />
+
+      <div class='col-sm-6 col-sm-offset-3'>
+        <input class='btn btn-default btn-block' type='submit' value='Save'>
+      </div>
+    </form>
+  </div>
+</div>
